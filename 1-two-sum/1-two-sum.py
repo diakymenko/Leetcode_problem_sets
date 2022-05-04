@@ -9,7 +9,7 @@ class Solution:
                 lst.append(index)
                 lst.append(dict_nums[target - num])
                 return lst
-            elif target - num not in dict_nums:
+            else:
                 dict_nums[num] = index
                 
         
