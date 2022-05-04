@@ -1,8 +1,6 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         dict_nums = {}
-        for index, item in enumerate(nums):
-            dict_nums[item] = index
         
         lst = []
         
@@ -10,7 +8,10 @@ class Solution:
             if target - num in dict_nums and dict_nums[target - num] != index:
                 lst.append(index)
                 lst.append(dict_nums[target - num])
-                return lst
+            elif target - num not in dict_nums:
+                dict_nums[num] = index
+        
+        return lst
                 
         
         
