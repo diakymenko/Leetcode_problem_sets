@@ -8,10 +8,9 @@ class Solution:
             if target - num in dict_nums and dict_nums[target - num] != index:
                 lst.append(index)
                 lst.append(dict_nums[target - num])
+                return lst
             elif target - num not in dict_nums:
                 dict_nums[num] = index
-        
-        return lst
                 
         
         
