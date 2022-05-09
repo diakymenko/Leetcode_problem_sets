@@ -11,9 +11,7 @@ class Solution:
                 right_pointer -= 1
                 to_place -= 1
             elif right_pointer < 0:
-                nums1[to_place] = nums1[left_pointer]
-                left_pointer -= 1
-                to_place -= 1
+                break
             elif nums1[left_pointer] >= nums2[right_pointer]:
                 nums1[to_place] = nums1[left_pointer]
                 left_pointer -= 1
