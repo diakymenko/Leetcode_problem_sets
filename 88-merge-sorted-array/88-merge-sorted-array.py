@@ -6,7 +6,7 @@ class Solution:
         to_place = len(nums1) - 1
 
         while to_place >= 0:
-            if right_pointer< 0:
+            if right_pointer < 0:
                 break
             elif left_pointer < 0 or nums2[right_pointer] > nums1[left_pointer]:
                 nums1[to_place] = nums2[right_pointer]
