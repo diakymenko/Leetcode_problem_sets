@@ -14,5 +14,3 @@ class Solution:
         diff = k - count
         return arr[len(arr) -1] + diff
             
-            
-        
