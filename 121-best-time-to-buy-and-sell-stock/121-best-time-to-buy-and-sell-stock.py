@@ -1,16 +1,29 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        best_deal = 0
-        min_price = prices[0]
+#         diff = 0
+        
+#         for i in range(len(prices)):
+#             for j in range(i+1, len(prices)):
+#                 if prices[j] - prices[i] > diff:
+#                     diff = prices[j] - prices[i]
+#         return diff
+        diff = 0
+        min_num = 9999999999
+        max_num = 0
+        min_num_idx = 0
+        max_num_idx = 0
 
-        for i in range(1, len(prices)):
-            if prices[i] - min_price > best_deal:
-                best_deal = prices[i] - min_price
-
-            if prices[i] < min_price:
-                min_price = prices[i]
-
-        return best_deal
+        for idx, num in enumerate(prices):
+            if num < min_num:
+                min_num = num
+#                min_num_idx = idx
+#                max_num = 0
+#            if num > max_num and idx > min_num_idx:
+#                max_num = num
+#                max_num_idx = idx
+            if num - min_num > diff: #and min_num_idx < max_num_idx:
+                diff = num - min_num
+        return diff
 
             
                 
