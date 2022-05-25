@@ -7,6 +7,7 @@ class Solution:
                 continue
             else:
                 new = new + letter
-        if len(new) == 1:
-            return True
-        return new == new[::-1]
+        for i in range(len(new)//2):
+            if new[i] != new[len(new) - 1 - i]:
+                return False
+        return True
