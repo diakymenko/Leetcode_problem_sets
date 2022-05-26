@@ -10,10 +10,7 @@ class Solution:
             if item not in par:
                 lst.append(item)
             else:
-                if len(lst) == 0:
-                    return False
-                last = lst.pop()
-                if par.get(item) != last:
+                if len(lst) == 0 or par.get(item) != lst.pop():
                     return False
 
         return len(lst) == 0
