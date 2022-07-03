@@ -6,15 +6,15 @@ class Solution:
             ")": "(",
         }
         lst = []
-        if len(s) == 1:
+        if len(s) % 2 != 0:
             return False
         
         for char in s:
             if char in par:
                 if len(lst) > 0:
-                    if lst[len(lst)-1] != par[char]:
+                    if lst[-1] != par[char]:
                         return False
-                    elif lst[len(lst)-1] == par[char]:
+                    else:
                         lst.pop()
                 else:
                     return False
