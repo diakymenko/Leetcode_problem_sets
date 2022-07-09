@@ -13,7 +13,7 @@ class Solution:
                 return i - 1
             elif target > nums[-1]:
                 return len(nums)
-            if nums[i-1] < target <= nums[i]:
+            if nums[i-1] <= target <= nums[i]:
                 return i
             elif target < nums[i-1]:
                 return i-1
