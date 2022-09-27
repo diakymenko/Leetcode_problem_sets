@@ -6,24 +6,21 @@
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        dict_a = {}
+        set_a = set()
         current_a = headA
         current_b = headB
         node = None
 
         while current_a:
-            dict_a[current_a] = current_a.next
+            set_a.add(current_a)
             current_a = current_a.next
 
         while current_b:
-            if current_b in dict_a:
+            if current_b in set_a:
                 node = current_b
-                while current_b in dict_a:
-                    if current_b.next != dict_a[current_b]:
-                        return None
-                    else:
-                        current_b = current_b.next
+                break
             else:
                 current_b = current_b.next
+            
         return node
         
