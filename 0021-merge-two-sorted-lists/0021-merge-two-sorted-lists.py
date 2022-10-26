@@ -11,24 +11,22 @@ class Solution:
         elif not list2:
             return list1
         
-        current1 = None
-        current2 = None
+        current1 = list1
+        current2 = list2
         
         
+        w = dummy = ListNode()
         
-        # head = dummy = ListNode()
         
+        # if list1.val <= list2.val:
+        #     head = list1
+        #     current1 = head.next
+        #     current2 = list2
+        # else:
+        #     head = list2
+        #     current2 = head.next
+        #     current1 = list1
         
-        if list1.val <= list2.val:
-            head = list1
-            current1 = head.next
-            current2 = list2
-        else:
-            head = list2
-            current2 = head.next
-            current1 = list1
-        
-        w = head
             
         while current1 and current2:
             if current1.val <= current2.val:
@@ -40,12 +38,9 @@ class Solution:
                 w = w.next
                 current2 = current2.next
                     
-        # if current1:
-        #     w.next = current1
-        # else:
-        #     w.next = current2
+    
         w.next = current1 or current2
             
                 
-        return head
+        return dummy.next
                 
