@@ -13,7 +13,11 @@ class Solution:
         
         current1 = None
         current2 = None
-        head = None
+        
+        
+        
+        # head = dummy = ListNode()
+        
         
         if list1.val <= list2.val:
             head = list1
@@ -36,10 +40,11 @@ class Solution:
                 w = w.next
                 current2 = current2.next
                     
-        if current1:
-            w.next = current1
-        else:
-            w.next = current2
+        # if current1:
+        #     w.next = current1
+        # else:
+        #     w.next = current2
+        w.next = current1 or current2
             
                 
         return head
