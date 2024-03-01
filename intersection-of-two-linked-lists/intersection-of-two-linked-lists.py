@@ -7,22 +7,29 @@
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         
-        set_a = set()
+#         set_a = set()
         
-        curr = headA
-        set_a = {curr}
+#         curr = headA
+#         set_a = {curr}
        
         
-        while curr.next != None:
-            curr = curr.next
-            set_a.add(curr)
+#         while curr.next != None:
+#             curr = curr.next
+#             set_a.add(curr)
         
-        curr = headB
+#         curr = headB
         
-        if curr in set_a:
-            return curr
+#         if curr in set_a:
+#             return curr
         
-        while curr.next != None:
-            curr = curr.next
-            if curr in set_a:
-                return curr
+#         while curr.next != None:
+#             curr = curr.next
+#             if curr in set_a:
+#                 return curr
+            
+            
+        p, q = headA, headB
+        while p != q:
+            p = p.next if p else headB
+            q = q.next if q else headA
+        return p
