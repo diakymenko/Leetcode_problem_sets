@@ -10,11 +10,11 @@ class Solution:
         curr = head
         while curr:
             if curr.val == val:
+                #handle case when we need to delete the 1st node, we move the head
                 if prev == None:
                     head = curr = curr.next
                 else:
                     prev.next = curr.next
-                    # prev = curr
                     curr = prev.next
             
             else:
