@@ -1,3 +1,5 @@
+
+# singly linked list
 class Node:
     def __init__(self, val):
         self.next = None
@@ -78,4 +80,26 @@ class MyLinkedList:
                 curr = curr.next
             curr.next = curr.next.next
         self.size -= 1
+
+
+# class Node:
+#     def __init__(self, val):
+#         self.next = None
+#         self.val = val
+#         self.prev = None
+
+# class MyLinkedList:
+#     def __init__(self):
+#         self.head = None
+#         self.size = 0
+    
+#     def get(self, index):
+#         if index < 0 or index >= self.size or self.head is None:
+#             return -1
+#         node = self.head
+#         for i in range(index):
+#             node = node.next
+#         return node.val
+
+    
         
