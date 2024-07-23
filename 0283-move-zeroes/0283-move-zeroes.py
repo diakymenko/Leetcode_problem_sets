@@ -4,11 +4,6 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         
-        zeros = 0
-        for num in nums:
-            if num == 0:
-                zeros += 1
-        
         left = 0
         right = 0
         
